@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Financeiro</title>
+    <link rel="stylesheet" href="form_financeiro.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h1 class="title">Solicitação de Auxílio</h1>
+            <form action="#" method="POST" id="myForm">
+                <div class="form-group">
+                    <label for="situacao">Situação Empregatícia:</label>
+                    <select id="situacao" name="situacao">
+                        <option value="" disabled selected>Selecione...</option>
+                        <option value="empregado">Trabalhando - CLT</option>
+                        <option value="informal">Trabalhando - Informal</option>
+                        <option value="desempregado">Desempregado</option>
+                        <option value="outro">Outro</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="renda">Renda Mensal (em R$):</label>
+                    <input type="text" id="renda" name="renda">
+                </div>
+                <div class="form-group">
+                    <label for="dependentes">Número de Pessoas Mantidas:</label>
+                    <input type="number" id="dependentes" name="dependentes">
+                </div>
+                <div class="form-group">
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="4" placeholder="Insira uma breve explicação do porquê de você estar solicitando o auxílio..."></textarea>
+                </div>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div id="overlay" class="overlay" style="display: none;">
+                <div class="overlay-content">
+                    <p>Suas informações foram enviadas com sucesso!</p>
+                    <button id="closeOverlay">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="form_financeiro.js"></script>
+</body>
+</html>
